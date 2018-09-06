@@ -3,6 +3,7 @@
   "description": "Laravel 5.6 model generator from existing schema",
   "keywords": ["laravel", "model", "schema", "generator"],
   "license": "MIT",
+  "version": "5.6",
   "authors": [
     {
       "name": "wythe",
