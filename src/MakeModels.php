@@ -95,10 +95,8 @@ class MakeModels extends Command{
 
     /*连接数据库*/
     protected function dbConnection(){
-        $this->database['laravel_name'] = $this->option('database') ? : config('databse.default');
-
+        $this->database['laravel_name'] = $this->option('database') ? : config('database.default');
         $this->db = DB::connection($this->database['laravel_name']);
-
         $this->database['dbname'] = config('database.connections.'.$this->database['laravel_name'].'.database');
     }
 
@@ -202,11 +200,11 @@ class MakeModels extends Command{
     }
     /*primaryKey*/
     protected function primaryKey(){
-        return $this->currTableInfo['primaryKey']->COLUMN_NAME;
+        return $this->currTableInfo['primaryKey'] ? $this->currTableInfo['primaryKey']->COLUMN_NAME: '';
     }
     /*incrementing*/
     protected function incrementing(){
-        return $this->currTableInfo['primaryKey']->EXTRA == 'auto_increment' ? 'true' : 'false';
+        return ($this->currTableInfo['primaryKey'] ? $this->currTableInfo['primaryKey']->EXTRA : '') == 'auto_increment' ? 'true' : 'false';
     }
     /*perPage*/
     protected function perPage(){
