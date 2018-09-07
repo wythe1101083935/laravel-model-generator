@@ -19,12 +19,12 @@ class MakeModels extends Command{
      * @var string
      */
     protected $signature = 'make:models 
-    {--table= :appoint the tables} 
-    {--path=  :where the models maked} 
-    {--database= :the tables from which database }
-    {--timestamps:set the timestamps}
-    {--created_at=created_at :set create time field}
-    {--updated_at=updated_at :set update time field}';
+    {--table= : Appoint the tables} 
+    {--path= : Where the models maked} 
+    {--database= : The tables from which database }
+    {--ut|timestamps : Use the timestamps}
+    {--created_at=created_at : Set create time field}
+    {--updated_at=updated_at : Set update time field}';
 
     /**
      * The console command description.
