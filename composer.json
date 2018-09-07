@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Wythe\\Generator\\": "src/"
+      "Wythe\\LaravelCommand\\": "src/"
     }
   }
 }
