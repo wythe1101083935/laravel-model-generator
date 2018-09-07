@@ -18,7 +18,13 @@ class MakeModels extends Command{
      *
      * @var string
      */
-    protected $signature = 'make:models {--table=} {--path=} {--database=}';
+    protected $signature = 'make:models 
+    {--table= :appoint the tables} 
+    {--path=  :where the models maked} 
+    {--database= :the tables from which database }
+    {--timestamps:set the timestamps}
+    {--created_at=created_at :set create time field}
+    {--updated_at=updated_at :set update time field}';
 
     /**
      * The console command description.
@@ -172,11 +178,11 @@ class MakeModels extends Command{
     }
     /*created_at*/
     protected function created_at(){
-        return 'created_at';
+        return $this->option('created_at');
     }
     /*updated_at*/
     protected function updated_at(){
-        return 'updated_at';
+        return $this->option('updated_at');
     }
     /*tableName*/
     protected function tableName(){
@@ -184,7 +190,7 @@ class MakeModels extends Command{
     }
     /*timestamps*/
     protected function timestamps(){
-        return 'false';
+        return $this->option('timestamps') ? 'true' : 'false';
     }
     /*dateFormat*/
     protected function dateFormat(){
