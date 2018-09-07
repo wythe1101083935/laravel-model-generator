@@ -1,0 +1,75 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * class {{modelName}}
+ */
+class {{modelName}} extends Model
+{
+    /**
+     * 是否自动维护时间戳
+     *
+     * @var string
+     */
+    public $timestamps = {{timestamps}};
+
+    /**
+     * 定义创建时间字段
+     *
+     * @var string
+     */
+    const CREATED_AT = '{{created_at}}';
+
+    /**
+     * 定义更新时间字段
+     *
+     * @var string
+     */
+    const UPDATED_AT = '{{updated_at}}';
+
+    /**
+     * 表名
+     *
+     * @var string
+     */
+    protected $table = '{{tableName}}';
+
+    /**
+     * 自定义时间戳格式
+     *
+     * @var string
+     */
+ 	//protected $dateFormat = '{{dateFormat}}';
+
+    /**
+     * 数据库
+     *
+     * @var string
+     */
+    protected $connection = '{{connection}}';
+
+    /**
+     * 主键
+     *
+     * @var string
+     */
+    protected $primaryKey = '{{primaryKey}}';
+
+    /**
+     * 主键是否自增
+     *
+     * @var string
+     */
+    public $incrementing = {{incrementing}};
+
+    /**
+     * page
+     *
+     * @var string
+     */
+    protected $perPage = {{perPage}};
+
+}
