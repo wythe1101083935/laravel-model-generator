@@ -1,6 +1,6 @@
-Laravel5.6 Models Generator from exist schame
+## Laravel5.6 Models Generator from exist schame
 
-USAGE
+## register
 
 register this command in /app/Console/Kernel.php
 ```php
@@ -13,7 +13,7 @@ register this command in /app/Console/Kernel.php
         \Wythe\LaravelCommand\MakeModels::class  //register here
     ];
 ```
-## help
+## artisan help make:models
      --table[=TABLE]             Appoint the tables
      
      --path[=PATH]              Where the models maked
