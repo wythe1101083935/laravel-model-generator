@@ -5,10 +5,10 @@
  +----------------------------------------------------------
  * TIME:2018-09-06 15:32:26
  +----------------------------------------------------------
- * author:wythe
+ * author:wythe(汪志虹)
  +----------------------------------------------------------
  */
-namespace App\Console\Commands;
+namespace Wythe\LaravelCommand;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
